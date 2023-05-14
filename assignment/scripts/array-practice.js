@@ -38,7 +38,8 @@ console.log('Final animal is', animalArray[3]);
 
 // 3.c. (STRETCH) TODO: Log the last animal by using the array length, 
 //      instead of the exact index number of the last item
-
+finalAnimal = animalArray.length --;
+console.log('The final animal is:', finalAnimal);
 
 
 // 4. Adding & Removing Array Items
@@ -81,17 +82,34 @@ console.log('The animals are now', animalArray);
 //     log both the food removed and the updated array
 unfavoritedFood = topFoods.shift();
 console.log(unfavoritedFood, 'is no longer one of my favorite foods.');
+console.log(topFoods);
 
 // 4.e (STRETCH) TODO: Replace the second food in your array
 //      with another one of your favorite foods.
 //      Then log the updated array.
+if(topFoods[1] === 'Salmon'){
+    console.log(`I no longer like ${topFoods[1]}`);
+    topFoods.splice(1, 1, 'Sugar Cookies');
+}
+console.log(`Now I like ${topFoods[1]}`);
 
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
+topFoods.sort(function(a, b){
+if (a < b){
+    return 1;
+}
+else{
+    return 0;
+}
+});
+console.log(topFoods);
 
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
+topFoods
+console.log(topFoods.join(' and '));
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
